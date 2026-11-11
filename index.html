@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: #FAF9F6;
+            background-color: #00005f;
+            margin: 0;
+        }
+
+        h1, h2{
+            text-align: center;
+            margin-left: 0;
+        }
+
+        form{
+            width: 100%;
+            max-width: 600px;
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .categoria{
+            margin: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label{
+            font-size: 20px;
+        }
+
+        input, textarea, select{
+            border-radius: 5px;
+        }
+
+        input{
+            padding-left: 3px;
+        }
+
+        textarea:focus, input:focus, select:focus{
+            outline: 3px solid #7171c4;
+        }
+
+        button{
+            margin: 12px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        button:hover{
+            background-color: #7171c4;
+        }
+
+        @media (max-width: 480px){
+            label{
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Colégio Londrinense</h1>
+    <h2>Formulário: Computação Unifil</h2>
+    <form action="post">
+        <div class="categoria">
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Nome">
+        </div>
+        <div class="categoria">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email">
+        </div>
+        <div class="categoria">
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="Senha">
+        </div>
+        <div class="categoria">
+            <label for="data">Data de nascimento</label>
+            <input type="date">
+        </div>
+        <div class="categoria">
+            <label for="curso">Curso</label>
+            <select>
+                <option value="">Ciência da Computação</option>
+                <option value="">Ciência de Dados</option>
+                <option value="">Engenharia de Software</option>
+            </select>
+        </div>
+        <div class="categoria">
+            <label for="sexo">Sexo</label>
+            <select>
+                <option value="">Masculino</option>
+                <option value="">Feminino</option>
+                <option value="">Não informar</option>
+            </select>
+        </div>
+        
+        <div class="categoria">
+            <label for="interesses">Interesses</label>
+            <select>
+                <option value="">Cybersegurança</option>
+                <option value="">Programação web</option>
+                <option value="">Backend</option>
+            </select>
+        </div>
+        <div class="categoria">
+            <label for="comentarios">Comentários</label>
+            <textarea name="comentarios" rows="4" placeholder="Digite seu comentário aqui"></textarea>
+        </div>
+        <div class="categoria">
+            <label for="foto">Upload de foto: </label>
+            <input type="file" name="foto" accept="image">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
